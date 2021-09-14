@@ -1,4 +1,4 @@
-#RNASSIST RNA Solutions: Synthesizing Information to Support Transcriptomics
+# RNASSIST RNA Solutions: Synthesizing Information to Support Transcriptomics
 
 This repo contains the source code of RNASSIST analysis modules developed under the Phase I of the NIAAA ASSIST project. These modules can be run in Jupyter notebooks, Docker containers, as well as workflows managed by the ADE (Active Discovery Engine) with increasing support for provenance.
 
