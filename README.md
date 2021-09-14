@@ -1,6 +1,6 @@
-# ASSIST (Alcoholism Solutions: Synthesizing Information to Support Treatments)
+#RNASSIST RNA Solutions: Synthesizing Information to Support Transcriptomics
 
-This repo contains the source code of ASSIST analysis modules developed under the Phase I of the ASSIST project. These modules can be run in Jupyter notebooks, Docker containers, as well as workflows managed by the ADE (Active Discovery Engine) with increasing support for provenance.
+This repo contains the source code of RNASSIST analysis modules developed under the Phase I of the NIAAA ASSIST project. These modules can be run in Jupyter notebooks, Docker containers, as well as workflows managed by the ADE (Active Discovery Engine) with increasing support for provenance.
 
 ### Description of the analysis modules:
 |#| Analysis Module | Description |
@@ -20,17 +20,17 @@ The analysis workflow follows the order of the modules and the modules are inter
 Module ```Critical Gene Validation``` requires a 3rd party license and is thus not included in this repo.
 
 ### Where to get data:
-Download data from [ASSIST Dropbox](https://www.dropbox.com/sh/uajkuclelr409e3/AADUigHDIqBXCaaDvcHo9sv-a?dl=0) in the `data` folder. The user guide below assumes that you have downloaded all data files and placed them under the `data` subfolder of this project.
+Download data from [RNASSIST Dropbox](https://www.dropbox.com/sh/uajkuclelr409e3/AADUigHDIqBXCaaDvcHo9sv-a?dl=0) in the `data` folder. The user guide below assumes that you have downloaded all data files and placed them under the `data` subfolder of this project.
 
 ## User Guide
 
-To run ASSIST software on your machine, you need to have Java, Python and Docker installed. We recommend Java SE Runtime 15.0.2, Python 3.7+ (tested on 3.8.5) and Docker 20.10.6. GNU Make 3.81 is also required to build the Docker images. Below we describe how to set up and run the ASSIST analysis modules in three different modes.
+To run RNASSIST software on your machine, you need to have Java, Python and Docker installed. We recommend Java SE Runtime 15.0.2, Python 3.7+ (tested on 3.8.5) and Docker 20.10.6. GNU Make 3.81 is also required to build the Docker images. Below we describe how to set up and run the RNASSIST analysis modules in three different modes.
 
 ### 1. How to set up the environment for Jupyter notebooks
-Jupyter notebooks for ASSIST analysis modules are included to allow researchers to test out the analysis code using the Jupyter notebook interface. The `notebooks` folder contains requirements files capturing software dependencies for the three notebooks included. Corresponding requirement file is loaded into each notebook at the beginning of the notebook.
+Jupyter notebooks for RNASSIST analysis modules are included to allow researchers to test out the analysis code using the Jupyter notebook interface. The `notebooks` folder contains requirements files capturing software dependencies for the three notebooks included. Corresponding requirement file is loaded into each notebook at the beginning of the notebook.
 
 ### 2. How to launch containers for each analysis module
-Before analysis modules can be launched through standalone containers, the corresponding images need to be loaded. You can either use the included Makefile to generate the corresponding images, or download them from [ASSIST Dropbox](https://www.dropbox.com/sh/uajkuclelr409e3/AADUigHDIqBXCaaDvcHo9sv-a?dl=0) in the `images/standalone` folder, place them under the `images/standalone` subfolder of this project, and load them using:
+Before analysis modules can be launched through standalone containers, the corresponding images need to be loaded. You can either use the included Makefile to generate the corresponding images, or download them from [RNASSIST Dropbox](https://www.dropbox.com/sh/uajkuclelr409e3/AADUigHDIqBXCaaDvcHo9sv-a?dl=0) in the `images/standalone` folder, place them under the `images/standalone` subfolder of this project, and load them using:
 ```
 make load-standalone-images
 ```
@@ -38,10 +38,10 @@ The analysis modules are meant to be launched in sequence in the order listed in
 
 There is a script called launch.py under the scripts folder that can be used to launch these analysis modules, e.g., to launch `Module Extraction` on the human dataset, use: `python launch.py module_extraction human <path to the data folder>`, where `<path to the data folder>` is the absolute path to the `data` folder under the project root.
 
-### 3. How to run ASSIST modules in a workflow using ADE
+### 3. How to run RNASSIST modules in a workflow using ADE
 
 #### Prepare ADE runtime environment
-Download `ade_runtime.tgz` from [ASSIST Dropbox](https://www.dropbox.com/sh/uajkuclelr409e3/AADUigHDIqBXCaaDvcHo9sv-a?dl=0) into the project root folder and unpack it using:
+Download `ade_runtime.tgz` from [RNASSIST Dropbox](https://www.dropbox.com/sh/uajkuclelr409e3/AADUigHDIqBXCaaDvcHo9sv-a?dl=0) into the project root folder and unpack it using:
 ```
 tar zxvf ade_runtime.tgz
 ```
@@ -80,7 +80,7 @@ ade
 
 
 #### Use ADE to run analysis workflow
-Use the launch script (`launch.bat` or `launch.sh`) to start up the ADE workflow user interface. There are ready made workflows for both `human` and `mouse` datasets under the `workflows` folder of this repo that can be loaded into the user interface. For this, you need to first download the ADE images for the analysis modules from [ASSIST Dropbox](https://www.dropbox.com/sh/uajkuclelr409e3/AADUigHDIqBXCaaDvcHo9sv-a?dl=0) in the `images/ade` folder and place them under `~/.ade_image_repo/netrias` on your machine. This is where ADE will be loading images into the runtime environment.
+Use the launch script (`launch.bat` or `launch.sh`) to start up the ADE workflow user interface. There are ready made workflows for both `human` and `mouse` datasets under the `workflows` folder of this repo that can be loaded into the user interface. For this, you need to first download the ADE images for the analysis modules from [RNASSIST Dropbox](https://www.dropbox.com/sh/uajkuclelr409e3/AADUigHDIqBXCaaDvcHo9sv-a?dl=0) in the `images/ade` folder and place them under `~/.ade_image_repo/netrias` on your machine. This is where ADE will be loading images into the runtime environment.
 
 Follow [ADE documentation](./ade/doc/README.md) that provides detailed description on using the ADE user interface.
 
@@ -493,7 +493,7 @@ Note that for the Kapoor data used in our analysis (aka the human data), the `Ne
         <tr>
             <td rowspan=9><sub>Output</sub></td>
             <td><sub>critical_genes.csv</sub></td>
-            <td><sub>candidate genes identified by ASSIST</sub></td>
+            <td><sub>candidate genes identified by RNASSIST</sub></td>
             <td><sub>:heavy_check_mark:</sub></td>
             <td><sub>:heavy_check_mark:</sub></td>
         </tr>
