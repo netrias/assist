@@ -1,6 +1,8 @@
+Last Updated: 10/5/2021
+
 # ADE
 
-The Advanced Discovery Engine (ADE) is an in-house workflow engine that provides a unified execution environment for various projects at Netrias. Projects are broken down into a set of components, where those components pass data to each other to form a workflow. Each component is isolated and configurable, meaning that re-use in future projects (or alternate versions of the same project) is straight-forward.
+The Active Discovery Engine (ADE) is an in-house workflow engine that provides a unified execution environment for various projects at Netrias. Projects are broken down into a set of components, where those components pass data to each other to form a workflow. Each component is isolated and configurable, meaning that re-use in future projects (or alternate versions of the same project) is straight-forward.
 
 Why use ADE over other workflow engines? ADE provides several distinct advantages:
 
